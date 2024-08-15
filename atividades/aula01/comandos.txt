@@ -1,0 +1,34 @@
+-------------------------------Comandos git-------------------------------
+
+-Clonar repositório remoto na maquina atual
+git clone https://github.com/ahagemeier7/Estrutura-de-dados24.git
+
+-Ver status do repositorio loal
+git status 
+
+-Adicionar arquivos não rastreados no git
+git add .
+
+-criar ponto marcação no projeto
+git commit -m escreveamensagem
+
+-Verificar repositorios remotos configurados no repo local
+git remote -v
+
+-Enviar comits pendentes para o repo remoto
+git push origin main
+
+-------------------------------Comandos.NET-------------------------------
+
+-Listar versões instaladas
+dotnet --list-sdks
+
+-criar novo projeto console
+dotnet new console -n "Aula01"
+
+-Executar programa
+dotnet run
+
+-Executar programa com detalhes
+dotnet watch run
+
