@@ -1,0 +1,46 @@
+Objetos
+Propriedades
+Ações -> Métodos, Procedimentos, Funcões
+
+Class = forma do objeto ou seja, é o código para criar o "objeto"
+Objeto em si = Variavel do tipo da classe, que está na memória
+
+
+Criando uma classe
+  
+public Class nomeclasse{
+
+}
+
+
+
+
+
+
+Andamento aula 1
+
+namespace Aula01
+{
+    public class TipoEnum
+    {
+        public enum Language
+        {
+            PTBR, EN, RU
+        }
+
+        public Language _language = Language.PTBR;   ->   declarando uma variavel que recebe o valor PTBR da classe Language
+
+        public Language GetLanguageEnum(string lang){    
+                    ^                ^           |   
+                    |                |        Parâmetro
+            Valor que vai retornar   |   
+            Devolve uma Lenguage     |
+                                     |
+                                Nome da função   
+        }
+    }
+}
+. = significa operador de acesso
+
+Método construtor tem sempre o mesmo nome da classe
+TipoEnum tipoenumerador = new TipoEnum();
