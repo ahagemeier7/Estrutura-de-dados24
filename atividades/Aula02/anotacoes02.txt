@@ -1,0 +1,3 @@
+Método podem ser funcões ou procedimentos
+
+procedimentos não retornam nada, enquanto funções sim
