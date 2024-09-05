@@ -50,3 +50,8 @@ if(indiceDoValor >= 0){
 }
 else
  Console.WriteLine("Realmente n tem");
+
+//É possivel também remover itens da lista
+arrlist.Remove("Mauricio");//remove pelo valor 
+arrlist.RemoveAt(1); //remove no indice 
+arrlist.RemoveRange(0,2); // o primeiro parametro é o indice e o segundo é quantas casas após o indice
