@@ -32,3 +32,21 @@ Console.WriteLine(capacidade);
 for(int i = 0;i> arrlist.Count;i++){
     Console.WriteLine(arrlist[i]);
 }
+
+//recursos importantes da lista
+// verificar se um valor é contido na lista
+bool contemNome = arrlist.Contains("Mauricio");
+if(!contemNome){
+    Console.WriteLine("Nome não encontrado");
+}
+
+//Para saber indice que contem o valor buscado
+//Neste caso se o valor existir na lista
+//ele retorna o índice (número inteiro)
+//caso o valor não exista na lista, retorna -1
+int indiceDoValor = arrlist.IndexOf("Mauricio");
+if(indiceDoValor >= 0){
+    Console.WriteLine(indiceDoValor);
+}
+else
+ Console.WriteLine("Realmente n tem");
