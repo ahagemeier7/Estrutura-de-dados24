@@ -1,6 +1,4 @@
-﻿using System;
-
-public enum TerrainEnum{
+﻿public enum TerrainEnum{
     Grass,
     Sand,
     Water,
@@ -38,6 +36,7 @@ class Program{
             { TerrainEnum.Water, TerrainEnum.Water, TerrainEnum.Water,
             TerrainEnum.Water, TerrainEnum.Water, TerrainEnum.Water,
             TerrainEnum.Water, TerrainEnum.Wall, TerrainEnum.Water, TerrainEnum.Water}
+
 
         };
 
