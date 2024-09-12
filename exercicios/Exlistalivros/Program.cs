@@ -39,7 +39,7 @@ livros.Add(new Books(){
    Paginas = 300
 });
 
-int maiorvalor = 0;
+int? maiorvalor = 0;
 string maiorlivro = "";
 
 do{
@@ -52,30 +52,31 @@ do{
    Console.WriteLine("Digite a autora");
    string? autora = Console.ReadLine();
    Console.WriteLine("Digite o número de páginas");
-   int pagina = Console.ReadLine();
-
+   string? pagina = Console.ReadLine();
+   int.TryParse(pagina, out int pnum);
 
    livros.Add(new Books(){
       Nome = nome,
       Editora = editora,
       Autor = autora,
-      Paginas = pagina
+      Paginas = pnum
    });
 
    
    Console.WriteLine("Digite 0 para quebrar o loop ou 1 para continuar");
-   int validador = Console.ReadLine();
+   string? validador = Console.ReadLine();
+   int.TryParse(validador, out int num);
 
-   if(validador == 0){
+   if(num == 0){
       break;
    }
 }
 while(true);
 
-foreach (livro l in livros)
+foreach(Books l in livros)
 {
-      if(l.pagina > maiorvalor){
-         maiorvalor = l.pagina;
+      if(l.Paginas > maiorvalor){
+         maiorvalor = l.Paginas;
          maiorlivro = l.Nome;
       }
 }
