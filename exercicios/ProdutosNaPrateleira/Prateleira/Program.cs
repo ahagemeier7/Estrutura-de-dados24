@@ -35,23 +35,41 @@ using Prateleira;
 
     
 
-Dictionary<string, string> prateleiras = new Dictionary<string, string>();
-
-prateleiras.Add("1","A1");
-prateleiras.Add("2","A1");
-prateleiras.Add("3","A1");
-prateleiras.Add("4","A1");
-prateleiras.Add("5","A1");
-prateleiras.Add("6","A2");
-prateleiras.Add("7","A8");
+Dictionary<string, string> prateleiras = new(){
+    { "1", "A1" },
+    { "2", "A1" },
+    { "3", "A1" },
+    { "4", "A1" },
+    { "5", "A1" },
+    { "6", "A2" },
+    { "7", "A8" },
+    { "8", "C1" },
+    { "9", "C2" },
+    { "10", "B8" },
+    { "11", "C8" },
+    { "12", "A3" },
+    { "13", "B5" },
+    { "14", "B7" },
+    { "15", "A5" }
+};
 
 bool x = true;
 while (x == true){
     Console.WriteLine("Digite o Código do produto para procurar");
     string? validador = Console.ReadLine();
-        if (validador != null){
-            prateleiras.TryGetValue(validador, out prodobj!);
+    Console.WriteLine(validador);
+        if (validador == null){
+            Console.WriteLine("Código Invalido! digite outro");  
+            
         }else{
-            Console.WriteLine("Código Invalido! digite outro");    
+            if(prateleiras.ContainsKey(validador!)){
+                Console.WriteLine("Código Invalido! digite outro"); 
+            }else{
+                Console.WriteLine($"{validador}");
+                Console.WriteLine($"O produto está na prateleira {prateleiras[validador]}");
+                x = false;
+            }
+
+            
         }
 }
