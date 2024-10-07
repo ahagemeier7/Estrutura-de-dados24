@@ -55,21 +55,20 @@ Dictionary<string, string> prateleiras = new(){
 
 bool x = true;
 while (x == true){
-    Console.WriteLine("Digite o Código do produto para procurar");
+    Console.WriteLine("Digite o Código do produto para procurar ou (S) para sair");
     string? validador = Console.ReadLine();
-    Console.WriteLine(validador);
-        if (validador == null){
-            Console.WriteLine("Código Invalido! digite outro");  
-            
+    if (validador != null){
+        if (validador.ToLower() == "s"){
+            x = false;
         }else{
-            if(prateleiras.ContainsKey(validador!)){
-                Console.WriteLine("Código Invalido! digite outro"); 
-            }else{
-                Console.WriteLine($"{validador}");
+            if(prateleiras.ContainsKey(validador)){
                 Console.WriteLine($"O produto está na prateleira {prateleiras[validador]}");
-                x = false;
+            }else{
+                Console.WriteLine("Código Invalido! digite outro"); 
             }
-
-            
         }
+    }else{
+        Console.WriteLine("Código Invalido! digite outro");  
+    }
+
 }
