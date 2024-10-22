@@ -1,11 +1,20 @@
-﻿using HeapSort;
+﻿using System.Security.Principal;
+using HeapSort;
+
+int min = 0;
+int max = 100;
+
+Random aleArray = new Random();
+int tamarray = aleArray.Next(2, 15);
+
+int[] numeros = new int[tamarray];
+
+Random aleatorio = new Random();
+for (int i = 0; i < numeros.Length; i++){
+    numeros[i] = aleatorio.Next(min, max);
+}
 
 
-var array = new int[] { 73, 57, 49, 99, 133, 20, 1 };
-var expected = new int[] { 1, 20, 49, 57, 73, 99, 133 };
-var sortFunction = new HeapSort.HeapSort();
-
-var sortedArray = HeapSort.HeapSort.SortArray(array, array.Length);
-
-Assert.IsNotNull(sortedArray);
-CollectionAssert.AreEqual(sortedArray, expected);
+HeapSort.HeapSort.Print(numeros);
+HeapSort.HeapSort.SortArray<int>(numeros, numeros.Length);
+HeapSort.HeapSort.Print(numeros);
