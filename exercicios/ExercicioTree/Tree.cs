@@ -11,9 +11,9 @@ namespace ExercicioTree
 
         public void PrintTree(Node node){
 
-            Console.Write($"Name: {node.Data?.Name}");
-            Console.Write($"Role: {node.Data?.Role}");
-            Console.WriteLine();
+            Console.Write($"Name: {node.Data?.Name}\n");
+            Console.Write($"Role: {node.Data?.Role}\n");
+            Console.Write("--\n");
 
             if(node.Children!.Count() > 0){
                 foreach(var i in node.Children!){
@@ -21,6 +21,5 @@ namespace ExercicioTree
                 }
             }
         }
-
     }
 }
