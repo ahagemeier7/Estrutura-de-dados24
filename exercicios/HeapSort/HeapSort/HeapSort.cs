@@ -50,7 +50,7 @@ namespace HeapSort
             foreach(T i in array){
                 Console.Write($"{i} ");
             }
-            Console.Write("]");
+            Console.Write("]\n");
         }
         
        

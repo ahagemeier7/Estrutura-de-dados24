@@ -20,4 +20,10 @@ node12.Children!.Add(node21!);
 
 tree.Root.Children[0].Children!.Add(node12);
 
+
+
+
+
+
+
 tree.PrintTree(tree.Root);

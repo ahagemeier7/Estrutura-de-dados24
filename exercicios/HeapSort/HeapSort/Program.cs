@@ -5,7 +5,7 @@ int min = 0;
 int max = 100;
 
 Random aleArray = new Random();
-int tamarray = aleArray.Next(2, 15);
+int tamarray = aleArray.Next(1, 10);
 
 int[] numeros = new int[tamarray];
 
