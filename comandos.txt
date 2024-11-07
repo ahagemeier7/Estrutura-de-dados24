@@ -18,6 +18,15 @@ git remote -v
 -Enviar comits pendentes para o repo remoto
 git push origin main
 
+git checkout -b "NomeDaBranch" //Cria Branch nova
+
+git checkout NomeBranch // Troca a Branch
+
+pit push origin NomeDaBranch
+pit pull origin NomeDaBranch
+git remote -v mostra repositórios Remotos
+
+
 -------------------------------Comandos.NET-------------------------------
 
 -Listar versões instaladas
